@@ -1,33 +1,36 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Plate Date</title>
-    <!-- Google Icon Fonts used by Materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <h1>Plate Date <3</h1>
-          <ul class="right">
-            <li>
-            <% if (user) { %>
-              <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-            <% } else { %>
-              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-            <% } %>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    hello
+  <html lang="en">
+    <body>
+      <%- include('../partials/nav')%>
+    <div class="row">
+      <div id="users" class="col s12">
+        <% users.forEach(function(user) { %>
+          
+          <div class="card blue-grey">
+            <div class="card-content white-text">
+              <div>
+                <span class="card-title">
+                  <i class="small material-icons">perm_identity</i>
+                  <span class="user-name">
+                    <a href="/users/<%= user._id %>"><%= user.name %></a>
+                  </span>
+                  <table>
+                    <thead>
+                      <th>Restaurants</th>
+                    </thead>
+                    <tbody>
+                    <% users.forEach(function(user) { %>
+                      <tr>
+                        <td>Bobboi</td>
+                      </tr>
+                    <% }) %>
+                    </tbody>
+                  </table>
+                </span>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+      </div>
   </body>
 </html>

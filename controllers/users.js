@@ -1,7 +1,8 @@
 const User = require('../models/user');
 
 module.exports = {
-  index
+  index, 
+  show
 };
 
 function index(req, res) {
@@ -11,3 +12,16 @@ function index(req, res) {
       name: req.query.name});
   });
 }
+
+
+function show(req, res) {
+  User.findById(req.params.id, function(err, user) {
+      res.render('users/show', { title: 'User Detail', user
+    });
+   
+});
+}
+
+
+
+

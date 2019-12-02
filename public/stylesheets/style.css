@@ -1,11 +1,15 @@
-.brand-logo {
-  margin-left: 15px;
+body {
+background-image: url("https://imgur.com/qm2ni9n.png");
+background-size: cover;
+
+}
+.userName {
+    justify-content: left;
+    font:12px;
+    color: purple;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
-}
+.home{
+    color: blue;
 
-#search-row form {
-  padding-top: 20px;
 }

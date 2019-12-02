@@ -7,6 +7,7 @@ passport.use(new GoogleStrategy({
     clientSecret: process.env.GOOGLE_SECRET,
     callbackURL: process.env.GOOGLE_CALLBACK
   },
+  
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ 'googleId': profile.id }, function(err, user) {
         if (err) return cb(err);
@@ -14,7 +15,7 @@ passport.use(new GoogleStrategy({
           return cb(null, user);
         } else {
           // we have a new user via OAuth!
-          var newUsere = new User({
+          var newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,
             googleId: profile.id
