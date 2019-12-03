@@ -5,11 +5,7 @@
     <div class="row">
       <div id="users" class="col s12">
         <% users.forEach(function(user) { %>
-          
-          <div class="card blue-grey">
-            <div class="card-content white-text">
               <div>
-                <span class="card-title">
                   <i class="small material-icons">perm_identity</i>
                   <span class="user-name">
                     <a href="/users/<%= user._id %>"><%= user.name %></a>
@@ -21,16 +17,15 @@
                     <tbody>
                     <% users.forEach(function(user) { %>
                       <tr>
-                        <td>Bobboi</td>
+                        <td><%=user.restaurants%></td>
                       </tr>
                     <% }) %>
                     </tbody>
                   </table>
                 </span>
-              </div>
-            </div>
           </div>
           <% }) %>
+      </div>
       </div>
   </body>
 </html>

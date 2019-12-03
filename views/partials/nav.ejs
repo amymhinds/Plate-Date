@@ -3,30 +3,31 @@
 <html>
   <head>
     <title>Plate Date</title>
+    
   <!-- Google Icon Fonts used by Materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+ 
   <!-- JavaScript for Materialize -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
+  
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
   <body>
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <a href="" class="brand-logo left">Plate Date</a>
-          <a href="/users" class="home right">Home</a>
-          <ul class="right">
-            <li>
+          <a href="" class="brand-logo">Plate Date</a>
+          <a href="/users" class="home">Home</a>
+          <div class ="login">
             <% if (user) { %>
-              <a href="/logout"id="signIn" ><i class="material-icons left">trending_flat</i>Log Out</a>
-              <h1 class = "userName"><%=user.name%></h1>
+              <a href="/logout" class= "logout" >Log Out</a>
+              <!-- <p class = "userName"><%=user.name%></p> -->
             <% } else { %>
-              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <a href="/auth/google" class = "login">Login with Google</a>
             <% } %>
-            </li>
-          </ul>
+          </div>
         </div>
       </nav>
     </div>

@@ -1,7 +1,30 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <body>
+
       <%- include('../partials/nav')%>
-        
+
+      <%= user.name %>
+      city: <%=user.city%>
+      <%=user.restaurants%>
+
+      <% if (user._id.equals(user && user._id)) { %>
+          <form action="/users/<%=user._id%>/restaurants/create" method="POST">
+          <label for="city-select">Choose a city:</label>
+          <select name="city" id="city-select">
+              <option value="">--Please choose an option--</option>
+              <option value="SD">San Diego</option>
+              <option value="SEA">Seattle</option>
+              <option value="LA">Los Angeles</option>
+              <option value="SF">San Francisco</option>
+          </select>
+    
+          <label>Restaurant:
+            <input type="text" name="resName">
+          </label><br>
+            <button type="submit" class="btn white-text">Submit</button>
+          </form>
+      <% } %>
     </body>
 </html>
+
+
+
+

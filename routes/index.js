@@ -1,10 +1,25 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var request = require('request');
+const zomatoURL = 'https://developers.zomato.com/api/v2.1/categories';
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  const options = {
+    url: 'https://developers.zomato.com/api/v2.1/cities?q=San%20Diego',
+    headers: {
+        'user-key':process.env.ZOMATO_APIKEY,
+       
+    }
+
+}
+request(options, (err, response, body) => {
+    res.send(body)
+})
+  
+  //res.render('index', { title: 'Express' });
 });
 
  // Google OAuth login route

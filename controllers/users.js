@@ -2,8 +2,13 @@ const User = require('../models/user');
 
 module.exports = {
   index, 
-  show
+  show, 
+  create
 };
+
+function create(req, res){
+  
+}
 
 function index(req, res) {
   User.find({}, function(err, users) {

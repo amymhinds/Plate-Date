@@ -1,10 +1,15 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var userSchema = new mongoose.Schema({
   name: String,
-  location: String,
-  googleId: String
-}, {
+  googleId: String,
+  restaurants: [{
+  type: Schema.Types.ObjectId,
+  ref: 'Restaurant'
+}]
+},
+{
   timestamps: true
 });
 

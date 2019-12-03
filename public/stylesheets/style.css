@@ -1,15 +1,24 @@
 body {
 background-image: url("https://imgur.com/qm2ni9n.png");
 background-size: cover;
-
+font-family: sans-serif;
+font-size: 20px;
 }
-.userName {
-    justify-content: left;
-    font:12px;
-    color: purple;
+.brand-logo{
+    margin: auto 0;
 }
-
+.login {
+    margin: auto 0;
+}
+.navbar-fixed{
+    background-color: salmon;
+}
+.nav-wrapper{
+    justify-content: space-evenly;
+    display: flex;
+   font-size: 25px;
+}
 .home{
     color: blue;
-
+    margin: auto 0;
 }
