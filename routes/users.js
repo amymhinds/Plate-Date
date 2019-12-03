@@ -5,7 +5,7 @@ var request = require('request');
 const zomatoURL = 'https://developers.zomato.com/api/v2.1/categories';
 
 
-router.post('/users/city', usersCtrl.create);
+
 
 /*get external api*/
 router.post('/users', function(req, res) {
@@ -14,7 +14,6 @@ router.post('/users', function(req, res) {
         headers: {
             'user-key':process.env.ZOMATO_APIKEY
         }
-
     }
     request(options, () => {
         
