@@ -4,7 +4,7 @@ const User = require('../models/user');
 
 module.exports = {
  create
-// new: newRestaurant
+
 };
 
 // function newRestaurant(req, res) {

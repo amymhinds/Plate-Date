@@ -8,7 +8,13 @@ var restaurantSchema = new Schema({
   city: {
     type: String,
   } 
-}, {
+,
+reviews: [{
+  type: Schema.Types.ObjectId,
+  ref: 'Review'
+}]
+}, 
+{
   timestamps: true
 });
 

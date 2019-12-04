@@ -7,13 +7,18 @@
         
           <th>Restaurants</th>
           <th>Locations</th>
-        
+          <th>Reviews</th>
         </thead>
         <tbody>
             <% user.restaurants.forEach(function(res){ %>
               <tr>
               <td> <%=res.resName%></td>
               <td> <%=res.city%></td>
+              <td> <% if (user._id.equals(currentUser && user._id)) { %>
+                <a href="restaurants/<%=res._id%>/review/new">Add/Edit Review</a>
+                <% } else {%>
+                <a href="restaurants/<%=res._id%>/review/new">Read Reviews</a>
+              <% }%></td>
             </tr>
             <%})%>
         </tbody>
