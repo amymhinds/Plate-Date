@@ -17,14 +17,12 @@
                     </thead>
                     <tbody>
                     <% users.forEach(function(user) { %>
-                      <tr>
-                        <td><% user.restaurants.forEach(function(res){ %>
-                          <%=res.resName%>
-                        <%})%></td>
-                        <td><% user.restaurants.forEach(function(res){ %>
-                          <%=res.city%>
-                        <%})%></td>
+                      <% user.restaurants.forEach(function(res){ %>
+                        <tr>
+                        <td> <%=res.resName%></td>
+                        <td> <%=res.city%></td>
                       </tr>
+                      <%})%>
                     <% }) %>
                     </tbody>
                   </table>

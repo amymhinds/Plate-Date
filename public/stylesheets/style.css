@@ -22,3 +22,7 @@ font-size: 20px;
     color: blue;
     margin: auto 0;
 }
+.user-background {
+    background-image: url('https://imgur.com/A20guNM.png');
+    background-size: cover;
+}

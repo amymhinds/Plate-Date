@@ -1,11 +1,25 @@
 
-      <%- include('../partials/nav')%>
-
+      <%- include('../partials/navBarUser')%>
+<body class = "user-background">
       <%= user.name %>
-      city: <%=user.city%>
-      <%=user.restaurants%>
+      <table>
+        <thead>
+        
+          <th>Restaurants</th>
+          <th>Locations</th>
+        
+        </thead>
+        <tbody>
+            <% user.restaurants.forEach(function(res){ %>
+              <tr>
+              <td> <%=res.resName%></td>
+              <td> <%=res.city%></td>
+            </tr>
+            <%})%>
+        </tbody>
+      </table>
 
-      <% if (user._id.equals(user && user._id)) { %>
+      <% if (user._id.equals(currentUser && user._id)) { %>
           <form action="/users/<%=user._id%>/restaurants/create" method="POST">
           <label for="city-select">Choose a city:</label>
           <select name="city" id="city-select">
@@ -22,6 +36,7 @@
             <button type="submit" class="btn white-text">Submit</button>
           </form>
       <% } %>
+    </body>
     </body>
 </html>
 
