@@ -13,12 +13,12 @@ router.get('/', function(req, res, next) {
         'user-key':process.env.ZOMATO_APIKEY,
        
     }
-
+    
 }
 request(options, (err, response, body) => {
     res.send(body)
 })
-  
+res.render('index')
   //res.render('index', { title: 'Express' });
 });
 
