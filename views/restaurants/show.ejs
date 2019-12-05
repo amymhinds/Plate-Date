@@ -1,13 +1,30 @@
 <%- include('../partials/nav')%>
 <h1><%=rest.resName%></h1>
+<% if(rest.reviews.length>0) {%>
+    <table>
+        <thead>
+            <th>Rating</th>
+            <th>Review</th>
+            <th>Rater</th>
+        </thead>
+        <tbody>
     <%rest.reviews.forEach(function(rev){ %>
-        <th>Rating</th>
-        <th>Review</th>
-        <th>Rater</th>
-        <tr><td><%=rev.rating%> /5</td></tr>
-        <tr><td><%=rev.review%></td></tr>
-        <tr><td><%=rev.rater%></td></tr>
+        <tr><td><%=rev.rating%> /5</td>
+        <td><%=rev.review%></td>
+        <td>
+            <%=rev.rater%>
+            <% if (user && (rev.rater === user.name) ){ %>
+                <form action='/restaurants/<%=rest._id%>/reviews/<%=rev._id%>?_method=DELETE'
+                    class="delete-form" method="POST">
+                    <button type="delete" class="btn red-text">Delete</button>
+                </form>
+            <% } %>
+        </td></tr>
    <%}) %>
+     </tbody>
+</table>
+
+<% } %> 
    <% if (user)  { %>
     <form action="/restaurants/<%=rest._id%>/reviews" method="POST">
     <select name="rating" id="rating-select">

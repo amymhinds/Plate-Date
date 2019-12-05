@@ -3,8 +3,16 @@ const User = require('../models/user');
 const Review= require('../models/review');
 
 module.exports = {
-    create
+    create, 
+    delete: deleteReview
    };
+
+   function deleteReview(req, res){
+    Review.findByIdAndDelete(req.params.revID, function(err, review) {
+      res.redirect(`/restaurants/${req.params.id}`);
+    });
+    
+  }
    
    function create(req, res){
     req.body.rater = req.user.name;

@@ -5,6 +5,7 @@ var request = require('request');
 
 
 router.post('/restaurants/:id/reviews', reviewsCtrl.create);
+router.delete('/restaurants/:id/reviews/:revID', reviewsCtrl.delete);
 
 
 
