@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 request(options, (err, response, body) => {
     res.send(body)
 })
-res.render('index')
+
   //res.render('index', { title: 'Express' });
 });
 
