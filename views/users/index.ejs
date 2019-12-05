@@ -5,8 +5,7 @@
     <div class="row">
       <div id="users" class="col s12">
         <% users.forEach(function(user) { %>
-              <div>
-                  <i class="small material-icons">perm_identity</i>
+              <div class = "ind-user">
                   <span class="user-name">
                     <a href="/users/<%= user._id%>"><%= user.name %></a>
                   </span>

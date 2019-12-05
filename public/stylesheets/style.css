@@ -1,7 +1,7 @@
 body {
 background-image: url("https://imgur.com/qm2ni9n.png");
 background-size: cover;
-font-family: sans-serif;
+font-family: 'Josefin Sans', sans-serif;
 font-size: 20px;
 }
 .brand-logo{
@@ -11,7 +11,9 @@ font-size: 20px;
     margin: auto 0;
 }
 .navbar-fixed{
-    background-color: salmon;
+    background-color: lavender;
+    margin: auto 0;
+    font-family: 'Lobster', cursive;
 }
 .nav-wrapper{
     justify-content: space-evenly;
@@ -25,4 +27,22 @@ font-size: 20px;
 .user-background {
     background-image: url('https://imgur.com/A20guNM.png');
     background-size: cover;
+}
+.ramen {
+    color: white;
+    background-image: url('https://imgur.com/OkTaSjg.png');
+    background-size: cover;
+}
+.title{
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin: auto 0;
+    
+}
+.ind-user{
+    background-color: white;
+    font-family: 'Sulphur Point';
+    
 }

@@ -20,5 +20,4 @@ reviews: [{
 {
   timestamps: true
 });
-
 module.exports = mongoose.model('Restaurant', restaurantSchema);
