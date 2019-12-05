@@ -8,7 +8,7 @@
               <div>
                   <i class="small material-icons">perm_identity</i>
                   <span class="user-name">
-                    <a href="/users/<%= user._id %>"><%= user.name %></a>
+                    <a href="/users/<%= user._id%>"><%= user.name %></a>
                   </span>
                   <table>
                     <thead>
@@ -16,14 +16,12 @@
                       <th>Location</th>
                     </thead>
                     <tbody>
-                    <% users.forEach(function(user) { %>
                       <% user.restaurants.forEach(function(res){ %>
                         <tr>
                         <td> <%=res.resName%></td>
                         <td> <%=res.city%></td>
                       </tr>
                       <%})%>
-                    <% }) %>
                     </tbody>
                   </table>
                 </span>

@@ -7,8 +7,11 @@ var userSchema = new mongoose.Schema({
   restaurants: [{
   type: Schema.Types.ObjectId,
   ref: 'Restaurant'
+}],
+reviews: [{
+  type: Schema.Types.ObjectId,
+  ref: 'Review'
 }]
-
 },
 {
   timestamps: true

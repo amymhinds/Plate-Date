@@ -7,7 +7,10 @@ var restaurantSchema = new Schema({
   },
   city: {
     type: String,
-  } 
+  },
+  combinedName: {
+    type: String,
+  }
 ,
 reviews: [{
   type: Schema.Types.ObjectId,

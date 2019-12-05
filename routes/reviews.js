@@ -4,9 +4,9 @@ var reviewsCtrl = require('../controllers/reviews');
 var request = require('request');
 
 
-router.get('restaurants/:id/review/new', reviewsCtrl.new);
+router.post('/restaurants/:id/reviews', reviewsCtrl.create);
 
-// router.get('/users/:id/restaurants', restaurantsCtrl.new);
+
 
 
 module.exports = router;

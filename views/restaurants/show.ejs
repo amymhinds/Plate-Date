@@ -1,0 +1,26 @@
+<%- include('../partials/nav')%>
+<h1><%=rest.resName%></h1>
+    <%rest.reviews.forEach(function(rev){ %>
+        <th>Rating</th>
+        <th>Review</th>
+        <td><%=rev.rating%> /5</td>
+        <td><%=rev.review%></td>
+   <%}) %>
+   <% if (user)  { %>
+    <form action="/restaurants/<%=rest._id%>/reviews" method="POST">
+    <select name="rating" id="rating-select">
+        <option value="">--Rate 1-5--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <label>Add Review:
+        <input type="text" name="review">
+    </label><br>
+    <button type="submit" class="btn white-text">Submit</button>
+    </form>
+   <% } %>
+</body>
+</html>
