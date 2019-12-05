@@ -4,7 +4,6 @@
       <%= user.name %>
       <table>
         <thead>
-        
           <th>Restaurants</th>
           <th>Locations</th>
           <th>Reviews</th>
@@ -23,7 +22,6 @@
             <%})%>
         </tbody>
       </table>
-
       <% if (currentUser && currentUser._id.equals(user._id)) { %>
           <form action="/restaurants/<%=user._id%>" method="POST">
           <label for="city-select">Choose a city:</label>
@@ -34,7 +32,6 @@
               <option value="LA">Los Angeles</option>
               <option value="SF">San Francisco</option>
           </select>
-    
           <label>Restaurant:
             <input type="text" name="resName">
           </label><br>

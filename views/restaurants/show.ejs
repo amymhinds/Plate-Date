@@ -3,8 +3,10 @@
     <%rest.reviews.forEach(function(rev){ %>
         <th>Rating</th>
         <th>Review</th>
-        <td><%=rev.rating%> /5</td>
-        <td><%=rev.review%></td>
+        <th>Rater</th>
+        <tr><td><%=rev.rating%> /5</td></tr>
+        <tr><td><%=rev.review%></td></tr>
+        <tr><td><%=rev.rater%></td></tr>
    <%}) %>
    <% if (user)  { %>
     <form action="/restaurants/<%=rest._id%>/reviews" method="POST">

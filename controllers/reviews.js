@@ -7,6 +7,7 @@ module.exports = {
    };
    
    function create(req, res){
+    req.body.rater = req.user.name;
     Review.create(req.body, function(err, review) {
         Restaurant.findById(req.params.id, function(err, rest){
             rest.reviews.push(review._id);

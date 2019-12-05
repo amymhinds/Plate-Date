@@ -7,7 +7,9 @@ var reviewSchema = new Schema ({
       },
      review: {
         type: String,
-      } 
+      },
+     rater: String,
+     raterEmail: String
     }, {
       timestamps: true
 });

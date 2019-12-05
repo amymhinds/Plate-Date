@@ -7,19 +7,18 @@ const zomatoURL = 'https://developers.zomato.com/api/v2.1/categories';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  const options = {
-    url: 'https://developers.zomato.com/api/v2.1/cities?q=San%20Diego',
-    headers: {
-        'user-key':process.env.ZOMATO_APIKEY,
+//   const options = {
+//     url: 'https://developers.zomato.com/api/v2.1/cities?q=San%20Diego',
+//     headers: {
+//         'user-key':process.env.ZOMATO_APIKEY,
        
-    }
+//     }
     
-}
-request(options, (err, response, body) => {
-    res.send(body)
-})
-
-  //res.render('index', { title: 'Express' });
+// }
+// request(options, (err, response, body) => {
+//     res.send(body)
+// })
+  res.redirect('/users');
 });
 
  // Google OAuth login route
