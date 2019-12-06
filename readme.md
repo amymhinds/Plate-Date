@@ -1,6 +1,6 @@
 ![](https://i.imgur.com/uUbkciW.jpg)
 
-# PlATE DATE
+# PLATE DATE
 ## Description
 
 This app allows a user to add restaurants in different cities they have eaten at and leave ratings and reviews.
@@ -10,7 +10,11 @@ They can also view other user's reviews for a specific restaurant.
 
 ## Technologies Used
 
-Mongoose, Node, JavaScript, CSS, HTML
+Mongoose, Node JS, CSS, HTML, Express, Google OAuth
+
+## Third party APIs
+
+Zomato
 
 ## Link to App
 
