@@ -4,7 +4,7 @@ var reviewsCtrl = require('../controllers/reviews');
 var request = require('request');
 
 
-router.post('/restaurants/:id/reviews', reviewsCtrl.create);
+router.post('/reviews/restaurants/:id', reviewsCtrl.create);
 router.delete('/restaurants/:id/reviews/:revID', reviewsCtrl.delete);
 
 

@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const Restaurant = require('../models/restaurant');
+var request = require('request');
 
 module.exports = {
   index, 
@@ -16,17 +17,13 @@ function index(req, res) {
     });
   }
 
-// function show(req, res) {
-//   User.findById(req.params.id, function(err, user) {
-//       res.render('users/show', { title: 'User Detail', user
-//     });
-// });
+
 function show(req, res) {
   User.findById(req.params.id).populate('restaurants').exec(function(
     err, user){
       let currentUser = req.user
-      res.render('users/show', { title: 'User Detail', user, currentUser
-    });
+    res.render('users/show', { title: 'User Detail', user, currentUser, restArray: [], loc: null
+  });
 });
 }
 

@@ -23,7 +23,7 @@
         </tbody>
       </table>
       <% if (currentUser && currentUser._id.equals(user._id)) { %>
-          <form action="/restaurants/<%=user._id%>" method="POST">
+          <form action="/restaurants/show" method="POST">
           <label for="city-select">Choose a city:</label>
           <select name="city" id="city-select">
               <option value="">--Please choose an option--</option>
@@ -32,9 +32,34 @@
               <option value="LA">Los Angeles</option>
               <option value="SF">San Francisco</option>
           </select>
-          <label>Restaurant:
-            <input type="text" name="resName">
-          </label><br>
+          <label for="cuisine-select">Choose a cuisine:</label>
+          <select name="cuisine" id="cuisine-select">
+              <option value="">--Please choose an option--</option>
+              <option value="1">American</option>
+              <option value="5">Bakery</option>
+              <option value="182">Breakfast</option>
+              <option value="25">Chinese</option>
+              <option value="100">Desserts</option>
+              <option value="40">Fast Food</option>
+              <option value="70">Mediterranean</option>
+              <option value="148">Indian</option>
+              <option value="55">Italian</option>
+              <option value="66">Lebanese</option>
+              <option value="95">Thai</option>
+              <option value="177">Sushi</option>
+          </select>
+          
+          <button type="submit" class="btn white-text">Submit City</button>
+          </form>
+
+          <form action="/restaurants/<%=user._id%>/<%=loc%>" method="POST">
+            <label for= "rest-select">Choose a Restaurant</label>
+            <select name="resName" id="rest-select">
+                <option value="">--Please choose an option--</option>
+                <% for(let i=0;i<restArray.length; i++) {%>
+                    <option value ="<%=restArray[i]%>"><%=restArray[i]%></option>%>
+                <% }%>
+            </select>
             <button type="submit" class="btn white-text">Submit</button>
           </form>
       <% } %>

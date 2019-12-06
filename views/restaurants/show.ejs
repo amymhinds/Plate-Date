@@ -27,7 +27,7 @@
 
 <% } %> 
    <% if (user)  { %>
-    <form action="/restaurants/<%=rest._id%>/reviews" method="POST">
+    <form action="/reviews/restaurants/<%=rest._id%>" method="POST">
     <select name="rating" id="rating-select">
         <option value="">--Rate 1-5--</option>
         <option value="1">1</option>

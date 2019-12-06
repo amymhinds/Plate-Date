@@ -6,7 +6,8 @@ const zomatoURL = 'https://developers.zomato.com/api/v2.1/categories';
 
 
 
-router.post('/restaurants/:id', restaurantsCtrl.create);
+router.post('/restaurants/show', restaurantsCtrl.listRes);
+router.post('/restaurants/:id/:loc', restaurantsCtrl.create);
 router.get('/restaurants/:id', restaurantsCtrl.show);
 
 
